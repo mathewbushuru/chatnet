@@ -30,6 +30,7 @@ export interface ButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   isLoading?: boolean;
+  isDisabled?: boolean;
 }
 
 const Button: FC<ButtonProps> = ({
@@ -37,13 +38,14 @@ const Button: FC<ButtonProps> = ({
   children,
   variant,
   isLoading,
+  isDisabled,
   size,
   ...props
 }) => {
   return (
     <button
       {...props}
-      disabled={isLoading}
+      disabled={isLoading || isDisabled}
       className={cn(buttonVariants({ variant, size, className }))}
     >
       {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}

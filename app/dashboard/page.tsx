@@ -1,11 +1,12 @@
-import { FC } from 'react'
+import { getServerSession } from "next-auth";
+import { authOptions } from "@lib/auth";
 
-interface DashboardPageProps {
-  
+export default async function DashboardPage() {
+  const session = await getServerSession(authOptions);
+
+  return (
+    <div>
+      <pre>{JSON.stringify(session,null,4)}</pre>
+    </div>
+  );
 }
-
-const DashboardPage: FC<DashboardPageProps> = ({}) => {
-  return <>DashboardPage</>
-}
-
-export default DashboardPage

@@ -56,8 +56,9 @@ const LoginPage: FC<LoginPageProps> = ({}) => {
             type="button"
             className="mx-auto w-full max-w-xs"
             onClick={loginWithGoogle}
+            isDisabled={true}
           >
-            Sign in
+            Sign in with email
           </Button>
 
           <Button
