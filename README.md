@@ -1,9 +1,11 @@
 ## ChatNet
 
-### Technologies Used
-- [`NextJS / TypeScript`](https://nextjs.org/) : Front-end
-- [`TailwindCSS`](https://tailwindcss.com/) : Styling
+I am working on this real-time chat application to check out React Server components and Next 13's (Beta) App directory. I  am using Redis for the database to enable quick almost-instant realtime chat.
+
+
+- [`NextJS / TypeScript`](https://nextjs.org/) : Front-end / API
 - [`Redis`](https://redis.io/) : Database
+- [`TailwindCSS`](https://tailwindcss.com/) : Styling
 
 ##### Others
 - [`Upstash`](https://upstash.com/) : Manage Redis database
@@ -14,6 +16,20 @@
 - [`Lucide Icon Library`](https://lucide.dev/docs/lucide-react) : Tree-shakeable icons
 - [`react-hot-toast`](https://react-hot-toast.com/docs) : For toast notifications
 
-### Notes
--  Decided to use Redis because it would allow for very quick almost-instant realtime chat.
-- Using  JSON Web Tokens (JWT) to store sessions instead of storing session data in database
+### Roadmap
+
+- [x] Build reusable custom button component
+- [x] Set up Redis
+- [x] Set up authentication/NextAuth
+- [x] Sign in page UI
+- [x] Mobile responsive Sign in page
+- [x] Implement Sign in with Google
+- [x] Set up toast errors for users
+- [x] Store 'signed in' users data on Redis
+- [ ] Add friends, accept or deny  friend requests
+- [ ] Send and receive real time messages
+- [ ] Protect sensitive routes
+- [ ] Refactor / Clean up code
+
+<!-- ### Notes
+- Using  JSON Web Tokens (JWT) to store sessions instead of storing session data in database -->
