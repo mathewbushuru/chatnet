@@ -16,7 +16,6 @@ const LoginPage: FC<LoginPageProps> = ({}) => {
       setIsLoading(true);
       await signIn("google");
     } catch (error) {
-      //display error message to user
       toast.error("Sign in failed! Try again")
     } finally {
       setIsLoading(false);
