@@ -10,15 +10,16 @@ interface LoginPageProps {}
 
 const LoginPage: FC<LoginPageProps> = ({}) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoadingGoogle, setIsLoadingGoogle] = useState<boolean>(false);
 
   async function loginWithGoogle() {
     try {
-      setIsLoading(true);
+        setIsLoadingGoogle(true);
       await signIn("google");
     } catch (error) {
       toast.error("Sign in failed! Try again")
     } finally {
-      setIsLoading(false);
+        setIsLoadingGoogle(false);
     }
   }
 
@@ -62,13 +63,13 @@ const LoginPage: FC<LoginPageProps> = ({}) => {
           </Button>
 
           <Button
-            isLoading={isLoading}
+            isLoading={isLoadingGoogle}
             variant="outline"
             type="button"
             className="align-items mx-auto flex w-full max-w-xs gap-2"
             onClick={loginWithGoogle}
           >
-            {!isLoading && <img src="/google.svg" className="w-4" />}
+            {!isLoadingGoogle && <img src="/google.svg" className="w-4" />}
             Sign in with Google
           </Button>
         </div>
