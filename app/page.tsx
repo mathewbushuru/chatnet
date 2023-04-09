@@ -3,7 +3,7 @@ import { db } from "@lib/db";
 
 export default async function Home() {
   
-  await db.set("hello","world")
+  // await db.set("hello","world")
 
   return (
     <main className="grid place-content-center py-5">
