@@ -12,6 +12,7 @@
 - [`clsx`](https://github.com/lukeed/clsx#readme) : construct classnames conditionally
 - [`tailwind-merge`](https://www.npmjs.com/package/tailwind-merge) : Merge tailwind classes efficiently.
 - [`Lucide Icon Library`](https://lucide.dev/docs/lucide-react) : Tree-shakeable icons
+- [`react-hot-toast`](https://react-hot-toast.com/docs) : For toast notifications
 
 ### Notes
 -  Decided to use Redis because it would allow for very quick almost-instant realtime chat.

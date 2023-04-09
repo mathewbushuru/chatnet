@@ -2,12 +2,26 @@
 
 import Button from "@ui/Button";
 import { FC, useState } from "react";
+import { signIn } from "next-auth/react";
 import { AirVent } from "lucide-react";
+import { toast } from "react-hot-toast";
 
 interface LoginPageProps {}
 
 const LoginPage: FC<LoginPageProps> = ({}) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  async function loginWithGoogle() {
+    try {
+      setIsLoading(true);
+      await signIn("google");
+    } catch (error) {
+      //display error message to user
+      toast.error("Sign in failed! Try again")
+    } finally {
+      setIsLoading(false);
+    }
+  }
 
   return (
     <>
@@ -20,21 +34,21 @@ const LoginPage: FC<LoginPageProps> = ({}) => {
             </h2>
           </div>
 
-          <label className="flex w-full max-w-xs flex-col text-md">
+          <label className="text-md flex w-full max-w-xs flex-col">
             Email
             <input
               type="text"
               placeholder="email@example.com"
-              className="rounded-md  border border-slate-400 py-1 px-2 placeholder:opacity-50 placeholder:text-sm focus:outline-none" 
+              className="rounded-md  border border-slate-400 px-2 py-1 placeholder:text-sm placeholder:opacity-50 focus:outline-none"
             />
           </label>
 
-          <label className="flex w-full max-w-xs flex-col text-md">
+          <label className="text-md flex w-full max-w-xs flex-col">
             Password
             <input
               type="password"
               placeholder="password"
-              className="rounded-md  border border-slate-400 py-1 px-2 placeholder:opacity-50 placeholder:text-sm focus:outline-none" 
+              className="rounded-md  border border-slate-400 px-2 py-1 placeholder:text-sm placeholder:opacity-50 focus:outline-none"
             />
           </label>
 
@@ -54,7 +68,7 @@ const LoginPage: FC<LoginPageProps> = ({}) => {
             className="align-items mx-auto flex w-full max-w-xs gap-2"
             onClick={loginWithGoogle}
           >
-            <img src="/google.svg" className="w-4" />
+            {!isLoading && <img src="/google.svg" className="w-4" />}
             Sign in with Google
           </Button>
         </div>
@@ -62,7 +76,5 @@ const LoginPage: FC<LoginPageProps> = ({}) => {
     </>
   );
 };
-
-async function loginWithGoogle() {}
 
 export default LoginPage;
