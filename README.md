@@ -2,6 +2,7 @@
 
 I am working on this real-time chat application to check out React Server components and Next 13's (Beta) App directory. I  am using Redis for the database to enable quick almost-instant realtime chat.
 
+### Technologies Used
 
 - [`NextJS / TypeScript`](https://nextjs.org/) : Front-end / API
 - [`Redis`](https://redis.io/) : Database
