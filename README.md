@@ -16,6 +16,8 @@ I am working on this real-time chat application to check out React Server compon
 - [`tailwind-merge`](https://www.npmjs.com/package/tailwind-merge) : Merge tailwind classes efficiently.
 - [`Lucide Icon Library`](https://lucide.dev/docs/lucide-react) : Tree-shakeable icons
 - [`react-hot-toast`](https://react-hot-toast.com/docs) : For toast notifications
+- [`react-hook-form](https://react-hook-form.com/) : Manage form data
+- [`zod`](https://zod.dev/) : Validate inputs
 
 ### Roadmap
 
