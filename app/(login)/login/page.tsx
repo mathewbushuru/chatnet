@@ -14,12 +14,12 @@ const LoginPage: FC<LoginPageProps> = ({}) => {
 
   async function loginWithGoogle() {
     try {
-        setIsLoadingGoogle(true);
+      setIsLoadingGoogle(true);
       await signIn("google");
     } catch (error) {
-      toast.error("Sign in failed! Try again")
+      toast.error("Sign in failed! Try again");
     } finally {
-        setIsLoadingGoogle(false);
+      setIsLoadingGoogle(false);
     }
   }
 
@@ -29,26 +29,26 @@ const LoginPage: FC<LoginPageProps> = ({}) => {
         <div className="flex w-full max-w-md flex-col items-center gap-5 ">
           <div className="flex flex-col items-center">
             <AirVent />
-            <h2 className="text-3-xl mt-3 text-center font-bold tracking-tight text-gray-900">
+            <h2 className="text-3-xl mt-3 text-center font-bold tracking-tight text-slate-900">
               Sign in to your account
             </h2>
           </div>
 
-          <label className="text-md flex w-full max-w-xs flex-col">
+          <label className="text-md leading-8 flex w-full max-w-xs flex-col">
             Email
             <input
               type="text"
               placeholder="email@example.com"
-              className="rounded-md  border border-slate-400 px-2 py-1 placeholder:text-sm placeholder:opacity-50 focus:outline-none"
+              className="rounded-md border border-slate-900 p-1.5 text-sm text-gray-700 placeholder:text-sm placeholder:opacity-50 focus:outline-none focus:ring-1 focus:ring-slate-900"
             />
           </label>
 
-          <label className="text-md flex w-full max-w-xs flex-col">
+          <label className="text-md leading-8 flex w-full max-w-xs flex-col">
             Password
             <input
               type="password"
               placeholder="password"
-              className="rounded-md  border border-slate-400 px-2 py-1 placeholder:text-sm placeholder:opacity-50 focus:outline-none"
+              className="rounded-md border border-slate-900 p-1.5 text-sm text-gray-700 placeholder:text-sm placeholder:opacity-50 focus:outline-none focus:ring-1 focus:ring-slate-900"
             />
           </label>
 
@@ -69,7 +69,14 @@ const LoginPage: FC<LoginPageProps> = ({}) => {
             className="align-items mx-auto flex w-full max-w-xs gap-2"
             onClick={loginWithGoogle}
           >
-            {!isLoadingGoogle && <img src="/google.svg" className="w-4" />}
+            {!isLoadingGoogle && (
+              <img
+                src="/google.svg"
+                width="16px"
+                height="16px"
+                className="w-4"
+              />
+            )}
             Sign in with Google
           </Button>
         </div>
