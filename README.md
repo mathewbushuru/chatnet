@@ -16,8 +16,8 @@ I am working on this real-time chat application to check out React Server compon
 - [`tailwind-merge`](https://www.npmjs.com/package/tailwind-merge) : Merge tailwind classes efficiently.
 - [`Lucide Icon Library`](https://lucide.dev/docs/lucide-react) : Tree-shakeable icons
 - [`react-hot-toast`](https://react-hot-toast.com/docs) : For toast notifications
-- [`react-hook-form](https://react-hook-form.com/) : Manage form data
-- [`zod`](https://zod.dev/) : Validate inputs
+- [`react-hook-form`](https://react-hook-form.com/) : Manage form data
+- [`zod`](https://zod.dev/) : Validate inputs and type safety
 
 ### Roadmap
 
@@ -29,10 +29,14 @@ I am working on this real-time chat application to check out React Server compon
 - [x] Implement Sign in with Google
 - [x] Set up toast errors for users
 - [x] Store 'signed in' users data on Redis
-- [ ] Add friends, accept or deny  friend requests
+- [x] Send friend requests
+- [ ] Main chat dashboard
+- [ ] Accept or deny  friend requests
 - [ ] Send and receive real time messages
 - [ ] Protect sensitive routes
 - [ ] Refactor / Clean up code
+
+![progress](./docs/progress.jpg)
 
 <!-- ### Notes
 - Using  JSON Web Tokens (JWT) to store sessions instead of storing session data in database -->

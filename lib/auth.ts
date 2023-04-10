@@ -44,7 +44,8 @@ export const authOptions: NextAuthOptions = {
       return session;
     },
     redirect(){
-        return "/dashboard"
+        // return "/dashboard"
+        return "/dashboard/add"
     }
   },
 };
