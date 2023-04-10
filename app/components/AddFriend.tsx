@@ -72,7 +72,7 @@ const AddFriend: FC<AddFriendProps> = ({}) => {
       {/* todo: show toasts for successful or error friend requests */}
       <p className="mt-4 text-red-600">{errors.email?.message}</p>
       {requestSuccessful && (
-        <p className="mt-4 text-green-600">{errors.email?.message}</p>
+        <p className="mt-4 text-green-600">Friend request sent!</p>
       )}
     </form>
   );
