@@ -36,7 +36,10 @@ I am working on this real-time chat application to check out React Server compon
 - [ ] Protect sensitive routes
 - [ ] Refactor / Clean up code
 
-![progress](./docs/progress.jpg)
+### Progress
+
+![progress1](./docs/progress1.jpg)
+![progress2](./docs/progress2.jpg)
 
 <!-- ### Notes
 - Using  JSON Web Tokens (JWT) to store sessions instead of storing session data in database -->
