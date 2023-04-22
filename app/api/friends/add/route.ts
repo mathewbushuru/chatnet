@@ -20,19 +20,6 @@ export async function POST(req: Request) {
     )) as string;
 
     // Find user's id from their email
-    // const RESTResponse = await fetch(
-    //   `${process.env.UPSTASH_REDIS_REST_URL}/get/user:email${requestedFriendEmail}`,
-    //   {
-    //     headers: {
-    //       Authorization: `Bearer ${process.env.UPSTASH_REDIS_REST_TOKEN}`,
-    //     },
-    //     cache: "no-store",
-    //   }
-    // );
-
-    // const data = (await RESTResponse.json()) as { result: string };
-
-    // const requestedFriendId = data.result; 
     if (!requestedFriendId) {
       return new Response("This person does not exist", { status: 400 });
     }

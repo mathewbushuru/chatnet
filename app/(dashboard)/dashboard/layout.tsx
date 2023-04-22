@@ -11,6 +11,7 @@ import {
   LogOut,
 } from "lucide-react";
 import { authOptions } from "@lib/auth";
+import SignoutButton from "@/components/SignoutButton";
 
 type SidebarOption = {
   id: number;
@@ -97,14 +98,15 @@ const Layout = async ({ children }: LayoutProps) => {
                       Settings
                     </span>
                   </Link>
-                  <Link href={"/dashboard"}>
+                  {/* <Link href={"/"}>
                     <span className="mb-2 flex items-center gap-x-2 hover:text-gray-400">
                       <>
                         <LogOut />
                       </>
                       Log out
                     </span>
-                  </Link>
+                  </Link> */}
+                  <SignoutButton/>
                 </div>
               </li>
             </ul>
