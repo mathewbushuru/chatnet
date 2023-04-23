@@ -11,6 +11,7 @@ const AddFriendPage = async ({}) => {
       <h1 className="bg-100 mb-8 text-4xl font-bold text-slate-900">
         Accept friend requests
       </h1>
+      {/* @ts-expect-error Server Component */}
       <AcceptFriends sessionId={session.user.id} />
     </main>
   );
