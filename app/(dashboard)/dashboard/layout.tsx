@@ -8,7 +8,7 @@ import {
   UserPlus,
   MessageCircle,
   Settings,
-  LogOut,
+  UserCheck,
 } from "lucide-react";
 import { authOptions } from "@lib/auth";
 import SignoutButton from "@/components/SignoutButton";
@@ -22,6 +22,7 @@ type SidebarOption = {
 
 const sidebarOptions: SidebarOption[] = [
   { id: 1, name: "Add friend", href: "/dashboard/add", Icon: <UserPlus /> },
+  { id: 2, name: "Friend requests", href: "/dashboard/accept", Icon: <UserCheck /> },
 ];
 
 interface LayoutProps {
@@ -81,7 +82,7 @@ const Layout = async ({ children }: LayoutProps) => {
                       </Link>
                     ))}
                   </div>
-                </li>
+                </li>  
               </div>
 
               {/* Profile  info  */}
@@ -98,14 +99,6 @@ const Layout = async ({ children }: LayoutProps) => {
                       Settings
                     </span>
                   </Link>
-                  {/* <Link href={"/"}>
-                    <span className="mb-2 flex items-center gap-x-2 hover:text-gray-400">
-                      <>
-                        <LogOut />
-                      </>
-                      Log out
-                    </span>
-                  </Link> */}
                   <SignoutButton/>
                 </div>
               </li>

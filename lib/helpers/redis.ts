@@ -1,4 +1,4 @@
-type Command = "zrange" | "get" | "sismember";
+type Command = "zrange" | "get" | "sismember" | "smembers";
 
 export async function fetchRedis(
   command: Command,

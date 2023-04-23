@@ -1,6 +1,6 @@
 ## ChatNet
 
-I am working on this real-time chat application to check out React Server components and Next 13's (Beta) App directory. I  am using Redis for the database to enable quick almost-instant realtime chat.
+This is a realtime chat application built with React Server Components/Next 13's App Directory. I am using Redis for the database to enable quick almost instant realtime chat.
 
 ### Technologies Used
 
@@ -30,16 +30,21 @@ I am working on this real-time chat application to check out React Server compon
 - [x] Set up toast errors for users
 - [x] Store 'signed in' users data on Redis
 - [x] Send friend requests
-- [ ] Main chat dashboard
 - [ ] Accept or deny  friend requests
+- [ ] Main chat dashboard
 - [ ] Send and receive real time messages
 - [ ] Protect sensitive routes
 - [ ] Refactor / Clean up code
 
 ### Progress
-
+Authentication page
 ![progress1](./docs/progress1.jpg)
+
+Add friends page
 ![progress2](./docs/progress2.jpg)
+
+Accept friend requests page
+![progress3](./docs/progress3.jpg)
 
 <!-- ### Notes
 - Using  JSON Web Tokens (JWT) to store sessions instead of storing session data in database -->
